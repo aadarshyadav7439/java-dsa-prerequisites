@@ -1,0 +1,2054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java Before DSA — Complete Prerequisites Guide</title>
+<meta name="description" content="An interactive revision guide covering every Java concept you need before starting Data Structures &amp; Algorithms — with searchable topics, progress tracking, and a readiness checklist.">
+<meta name="theme-color" content="#14110d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="visually-hidden" href="#main-content">Skip to content</a>
+
+<header class="site-header">
+  <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebar">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+  <div class="brand"><span class="brand-mark">&gt;_</span> Java Before DSA</div>
+  <div class="search-wrap">
+    <svg class="search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="search" id="search-input" placeholder="Search topics… (arrays, recursion, HashMap)" aria-label="Search topics">
+    <span class="search-kbd">/</span>
+  </div>
+  <span id="search-results-count" aria-live="polite"></span>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark or light theme">
+    <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+    <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+  <nav class="sidebar" id="sidebar" aria-label="Section navigation">
+    <div class="sidebar-progress">
+      <span class="label">$ overall_progress</span>
+      <div class="progress-track"><div class="progress-fill" id="sidebar-progress-fill"></div></div>
+      <span class="pct" id="sidebar-progress-pct">0%</span>
+      <button class="btn btn-ghost btn-sm" id="reset-progress" type="button">Reset progress</button>
+    </div>
+
+    <div class="sidebar-group">
+      <h3>Overview</h3>
+      <ul>
+        <li><a class="side-link" href="#hero">Home</a></li>
+        <li><a class="side-link" href="#roadmap">Roadmap</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-group">
+      <h3>Core Java</h3>
+      <ul>
+        <li><a class="side-link" href="#basics" data-section="basics"><span>Java Basics</span><span class="side-dot"></span></a></li>
+        <li><a class="side-link" href="#loops" data-section="loops"><span>Conditions &amp; Loops</span><span class="side-dot"></span></a></li>
+        <li><a class="side-link" href="#methods" data-section="methods"><span>Methods</span><span class="side-dot"></span></a></li>
+        <li><a class="side-link" href="#arrays" data-section="arrays"><span>Arrays</span><span class="side-dot"></span></a></li>
+        <li><a class="side-link" href="#strings" data-section="strings"><span>Strings</span><span class="side-dot"></span></a></li>
+        <li><a class="side-link" href="#oop" data-section="oop"><span>Basic OOP</span><span class="side-dot"></span></a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-group">
+      <h3>DSA-Ready Java</h3>
+      <ul>
+        <li><a class="side-link" href="#recursion" data-section="recursion"><span>Recursion</span><span class="side-dot"></span></a></li>
+        <li><a class="side-link" href="#collections" data-section="collections"><span>Collections</span><span class="side-dot"></span></a></li>
+        <li><a class="side-link" href="#stack" data-section="stack"><span>Stack</span><span class="side-dot"></span></a></li>
+        <li><a class="side-link" href="#queue" data-section="queue"><span>Queue</span><span class="side-dot"></span></a></li>
+        <li><a class="side-link" href="#priority-queue" data-section="priority-queue"><span>PriorityQueue</span><span class="side-dot"></span></a></li>
+        <li><a class="side-link" href="#complexity" data-section="complexity"><span>Time &amp; Space Complexity</span><span class="side-dot"></span></a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-group">
+      <h3>Reference</h3>
+      <ul>
+        <li><a class="side-link" href="#cheatsheet">Java DSA Cheat Sheet</a></li>
+        <li><a class="side-link" href="#complexity-cheatsheet">Complexity Cheat Sheet</a></li>
+        <li><a class="side-link" href="#mistakes">Common Mistakes</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-group">
+      <h3>Before You Start</h3>
+      <ul>
+        <li><a class="side-link" href="#checklist">Readiness Checklist</a></li>
+        <li><a class="side-link" href="#whats-next">What's Next</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="mobile-scrim" id="mobile-scrim"></div>
+
+  <main id="main-content">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+      <span class="eyebrow">~/java-before-dsa $ status --check</span>
+      <h1>Java Before DSA</h1>
+      <p class="subtitle">Everything you should know before starting Data Structures &amp; Algorithms in Java.</p>
+      <p class="lede">This guide covers the Java fundamentals, programming concepts, and built-in data structures you should be comfortable with before starting serious DSA preparation. Scan it, check things off, and come back before every interview.</p>
+
+      <div class="hero-stats">
+        <div class="stat-card accent"><div class="num" id="stat-total">–</div><div class="lbl">total topics</div></div>
+        <div class="stat-card"><div class="num" id="stat-completed">0</div><div class="lbl">completed</div></div>
+      </div>
+
+      <div class="hero-progress">
+        <div class="progress-track"><div class="progress-fill" id="hero-progress-fill"></div></div>
+        <div class="hero-progress-labels"><span>Overall progress</span><span id="hero-progress-pct">0%</span></div>
+      </div>
+
+      <div class="hero-actions">
+        <button class="btn btn-primary" id="start-learning" type="button">Start Learning →</button>
+        <a class="btn btn-ghost" href="#checklist">Jump to readiness check</a>
+      </div>
+    </section>
+
+    <!-- ===================== ROADMAP ===================== -->
+    <section class="roadmap-section" id="roadmap">
+      <div class="section-kicker"><span class="section-num mono">Map</span></div>
+      <h2>Prerequisite Roadmap</h2>
+      <p>Eleven stops between "I know some Java" and "I'm ready to start DSA." Click any stop to jump straight there — the trail fills in gold as you check off topics.</p>
+
+      <div class="roadmap">
+        <div class="roadmap-fill" id="roadmap-fill"></div>
+        <a class="roadmap-step" data-sections="basics" href="#basics"><span class="node">01</span><span class="step-title">Java Basics</span><span class="step-sub">Variables, types, casting, input</span></a>
+        <a class="roadmap-step" data-sections="loops" href="#loops"><span class="node">02</span><span class="step-title">Conditions &amp; Loops</span><span class="step-sub">Branching, iteration, loop complexity</span></a>
+        <a class="roadmap-step" data-sections="methods" href="#methods"><span class="node">03</span><span class="step-title">Methods</span><span class="step-sub">Declaring, calling, overloading</span></a>
+        <a class="roadmap-step" data-sections="arrays" href="#arrays"><span class="node">04</span><span class="step-title">Arrays</span><span class="step-sub">The foundation of almost everything</span></a>
+        <a class="roadmap-step" data-sections="strings" href="#strings"><span class="node">05</span><span class="step-title">Strings</span><span class="step-sub">Traversal, comparison, StringBuilder</span></a>
+        <a class="roadmap-step" data-sections="oop" href="#oop"><span class="node">06</span><span class="step-title">Basic OOP</span><span class="step-sub">Just enough to write a Node class</span></a>
+        <a class="roadmap-step" data-sections="recursion" href="#recursion"><span class="node">07</span><span class="step-title">Recursion</span><span class="step-sub">Base case, call stack, unwinding</span></a>
+        <a class="roadmap-step" data-sections="collections" href="#collections"><span class="node">08</span><span class="step-title">Collections</span><span class="step-sub">ArrayList, HashMap, HashSet</span></a>
+        <a class="roadmap-step" data-sections="stack,queue" href="#stack"><span class="node">09</span><span class="step-title">Stack &amp; Queue</span><span class="step-sub">LIFO and FIFO with Deque</span></a>
+        <a class="roadmap-step" data-sections="priority-queue" href="#priority-queue"><span class="node">10</span><span class="step-title">PriorityQueue</span><span class="step-sub">Java's built-in heap</span></a>
+        <a class="roadmap-step" data-sections="complexity" href="#complexity"><span class="node">11</span><span class="step-title">Time &amp; Space Complexity</span><span class="step-sub">Big-O, fluently</span></a>
+        <div class="roadmap-step finish"><span class="node">🚀</span><span class="step-title">Start DSA</span><span class="step-sub">You're ready — go build something</span></div>
+      </div>
+    </section>
+
+    <!-- ===================== 1. JAVA BASICS ===================== -->
+    <section class="topic-section" id="basics">
+      <div class="section-head">
+        <div class="intro">
+          <div class="section-kicker"><span class="section-num mono">01 / 12</span></div>
+          <h2>Java Basics</h2>
+          <p>The absolute floor: how Java stores and reads data. Nothing fancy — just make sure these are reflexive before you move on.</p>
+        </div>
+        <div class="section-toolbar">
+          <button class="btn btn-ghost btn-sm" data-action="expand-all" type="button">Expand all</button>
+          <button class="btn btn-ghost btn-sm" data-action="collapse-all" type="button">Collapse all</button>
+        </div>
+      </div>
+
+      <div class="topics-grid">
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Variables &amp; Data Types</span>
+            <input type="checkbox" class="topic-check" data-topic-id="var-datatypes" aria-label="Mark Variables and Data Types as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>Java is statically typed — every variable has a fixed type declared up front, and that type never changes. The primitive types you'll actually use in DSA are <code class="inline">int</code>, <code class="inline">long</code>, <code class="inline">double</code>, <code class="inline">char</code>, and <code class="inline">boolean</code>.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>int age = 20;
+long population = 1_000_000_000L;
+double price = 99.99;
+char grade = 'A';
+boolean passed = true;</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li><code class="inline">int</code> is 32-bit and holds up to ~2.1 billion — fine for most things, but overflows silently.</li>
+                <li><code class="inline">long</code> is 64-bit; append <code class="inline">L</code> to the literal or it's treated as <code class="inline">int</code> first.</li>
+                <li><code class="inline">double</code> is the default choice for decimals in DSA problems.</li>
+                <li>Underscores in number literals (<code class="inline">1_000_000</code>) are just for readability — the compiler ignores them.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Forgetting to use <code class="inline">long</code> for values that can exceed ~2.1 billion (factorials, products of two large ints) — the answer silently wraps around into a negative number instead of throwing an error.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>Problems that ask "how many ways to..." or multiply two large counts almost always need <code class="inline">long</code>. If a result looks impossibly negative, overflow is the first thing to suspect.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Type Casting</span>
+            <input type="checkbox" class="topic-check" data-topic-id="type-casting" aria-label="Mark Type Casting as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>Casting converts a value from one type to another. Widening (<code class="inline">int → long → double</code>) happens automatically. Narrowing (<code class="inline">double → int</code>) needs an explicit cast and can lose data.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>int a = 10, b = 3;
+double result = (double) a / b;   // 3.333...
+long big = 5000000000L;
+int truncated = (int) big;        // data loss, be careful</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li>Integer division truncates: <code class="inline">10 / 3</code> is <code class="inline">3</code>, not <code class="inline">3.33</code> — cast <em>before</em> the division, not after.</li>
+                <li>Casting a <code class="inline">char</code> to <code class="inline">int</code> gives its Unicode value: <code class="inline">(int) 'A'</code> is <code class="inline">65</code>.</li>
+                <li>Narrowing casts can silently lose precision or overflow — Java won't warn you at runtime.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Casting after the division: <code class="inline">(double)(a / b)</code> still does integer division first, then converts the already-wrong result.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>Comes up constantly when computing averages, midpoints (<code class="inline">(low + high) / 2</code>), or percentages inside loops.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Operators</span>
+            <input type="checkbox" class="topic-check" data-topic-id="operators" aria-label="Mark Operators as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>Arithmetic (<code class="inline">+ - * / %</code>), relational (<code class="inline">== != &lt; &gt; &lt;= &gt;=</code>), logical (<code class="inline">&amp;&amp; || !</code>), and assignment operators. The modulus operator <code class="inline">%</code> is used constantly in DSA for parity checks and circular indices.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>int n = 17;
+boolean isEven = (n % 2 == 0);
+int lastDigit = n % 10;               // 7
+int wrapped = (i + 1) % arr.length;   // circular index</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li><code class="inline">%</code> on negative numbers can return a negative result (<code class="inline">-7 % 3</code> is <code class="inline">-1</code>) — different from some other languages.</li>
+                <li><code class="inline">&amp;&amp;</code> and <code class="inline">||</code> short-circuit: the second operand isn't evaluated if the first already decides the result.</li>
+                <li><code class="inline">++i</code> vs <code class="inline">i++</code> only differ when the expression's value is used immediately.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Using <code class="inline">=</code> instead of <code class="inline">==</code> inside a condition — <code class="inline">if (isEven = true)</code> compiles and silently reassigns instead of comparing.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>Modulus powers circular arrays and hashing; short-circuit <code class="inline">&amp;&amp;</code> is what makes a check like <code class="inline">node != null &amp;&amp; node.value &gt; 0</code> safe.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Input with Scanner</span>
+            <input type="checkbox" class="topic-check" data-topic-id="scanner-input" aria-label="Mark Input with Scanner as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p><code class="inline">Scanner</code> reads input from <code class="inline">System.in</code>. It's the easiest way to read numbers and words, and the standard choice for small inputs and local testing.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>Scanner sc = new Scanner(System.in);
+int n = sc.nextInt();
+String line = sc.nextLine();
+sc.close();</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li><code class="inline">import java.util.Scanner;</code> is required.</li>
+                <li><code class="inline">nextInt()</code> leaves the trailing newline in the buffer — a <code class="inline">nextLine()</code> right after returns an empty string unless you consume it first.</li>
+                <li>Fine for small inputs, but noticeably slower than <code class="inline">BufferedReader</code> on large ones.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Mixing <code class="inline">nextInt()</code> and <code class="inline">nextLine()</code> without an extra <code class="inline">sc.nextLine()</code> in between, which "skips" the next line read.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>Fine for interview-style problems and local testing of your own array/string solutions.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Faster Input with BufferedReader</span>
+            <input type="checkbox" class="topic-check" data-topic-id="bufferedreader-input" aria-label="Mark BufferedReader as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p><code class="inline">BufferedReader</code> reads raw text faster than <code class="inline">Scanner</code> because it doesn't parse types for you — you read a line as a <code class="inline">String</code> and convert it yourself.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+int n = Integer.parseInt(br.readLine().trim());
+String[] parts = br.readLine().split(" ");
+int first = Integer.parseInt(parts[0]);</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li>Everything comes back as a <code class="inline">String</code> — convert with <code class="inline">Integer.parseInt()</code>, <code class="inline">Long.parseLong()</code>, etc.</li>
+                <li><code class="inline">readLine()</code> throws <code class="inline">IOException</code>, so wrap it or declare <code class="inline">throws IOException</code>.</li>
+                <li>Use <code class="inline">split(" ")</code> (or <code class="inline">split("\\s+")</code>) to break a line of numbers apart.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Forgetting <code class="inline">.trim()</code> before parsing — a trailing space or <code class="inline">\r</code> makes <code class="inline">parseInt()</code> throw.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>Reach for this when <code class="inline">Scanner</code> is genuinely too slow (competitive programming with large <code class="inline">n</code>). For everyday DSA prep, <code class="inline">Scanner</code> is usually enough.</p>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ===================== 2. CONDITIONS & LOOPS ===================== -->
+    <section class="topic-section" id="loops">
+      <div class="section-head">
+        <div class="intro">
+          <div class="section-kicker"><span class="section-num mono">02 / 12</span></div>
+          <h2>Conditions &amp; Loops</h2>
+          <p>Every DSA solution is loops and branches wearing a fancier name. Get comfortable tracing them by hand.</p>
+        </div>
+        <div class="section-toolbar">
+          <button class="btn btn-ghost btn-sm" data-action="expand-all" type="button">Expand all</button>
+          <button class="btn btn-ghost btn-sm" data-action="collapse-all" type="button">Collapse all</button>
+        </div>
+      </div>
+
+      <div class="topics-grid">
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">if / else-if / else</span>
+            <input type="checkbox" class="topic-check" data-topic-id="if-else" aria-label="Mark if-else as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>Branches execution based on a boolean condition. <code class="inline">else-if</code> chains check multiple conditions in order; only the first true branch runs.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>if (n &lt; 0) {
+    System.out.println("negative");
+} else if (n == 0) {
+    System.out.println("zero");
+} else {
+    System.out.println("positive");
+}</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li>Conditions must evaluate to <code class="inline">boolean</code> — Java won't accept <code class="inline">0</code>/<code class="inline">1</code> as true/false.</li>
+                <li><code class="inline">else-if</code> is really just <code class="inline">else { if (...) }</code>.</li>
+                <li>Braces are optional for single statements — keep them anyway.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Dropping the braces and adding a second statement under an <code class="inline">if</code>, assuming both lines are conditional when only the first one is.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>This is the entire logic of binary search, base cases in recursion, and validating input before processing it.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">switch Statement</span>
+            <input type="checkbox" class="topic-check" data-topic-id="switch-case" aria-label="Mark switch as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>An alternative to a long <code class="inline">else-if</code> chain when comparing one variable against several fixed values.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>switch (grade) {
+    case 'A':
+        System.out.println("Excellent");
+        break;
+    case 'B':
+        System.out.println("Good");
+        break;
+    default:
+        System.out.println("Keep going");
+}</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li>Without <code class="inline">break</code>, execution "falls through" into the next case.</li>
+                <li><code class="inline">default</code> is optional but good practice.</li>
+                <li>Works with <code class="inline">int</code>, <code class="inline">char</code>, <code class="inline">String</code>, and enums.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Forgetting <code class="inline">break</code> and silently falling through into unrelated cases.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>Less common than <code class="inline">if-else</code> in DSA, but useful for state-machine style problems.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">for Loop</span>
+            <input type="checkbox" class="topic-check" data-topic-id="for-loop" aria-label="Mark for loop as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>The workhorse loop for anything with a known number of iterations — the backbone of array and string traversal.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>for (int i = 0; i &lt; n; i++) {
+    // work with i
+}</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li>Three parts: initialization, condition, update — all optional, but almost always all three are used.</li>
+                <li>The condition is checked before every iteration, including the first.</li>
+                <li><code class="inline">for (int i = n - 1; i &gt;= 0; i--)</code> walks backward — just as common.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Using <code class="inline">&lt;=</code> instead of <code class="inline">&lt;</code> against a length, causing one extra out-of-bounds iteration.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>This is how you traverse arrays and strings, and build the outer/inner loops of nested-loop algorithms.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">while and do-while Loops</span>
+            <input type="checkbox" class="topic-check" data-topic-id="while-dowhile" aria-label="Mark while and do-while as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p><code class="inline">while</code> checks the condition before each iteration and may run zero times. <code class="inline">do-while</code> checks after, so the body always runs at least once.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>int i = 0;
+while (i &lt; n) {
+    i++;
+}
+
+int choice;
+do {
+    choice = sc.nextInt();
+} while (choice != 0);</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li>Use <code class="inline">while</code> when the number of iterations isn't known ahead of time.</li>
+                <li><code class="inline">do-while</code> guarantees at least one execution.</li>
+                <li>An easy-to-miss infinite loop happens when the loop variable is never updated inside the body.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Updating the condition variable only inside an <code class="inline">if</code> that doesn't always execute — accidentally creating an infinite loop.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>Two-pointer techniques, binary search, and "keep dividing by 2" patterns are almost always written as <code class="inline">while</code> loops.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">break and continue</span>
+            <input type="checkbox" class="topic-check" data-topic-id="break-continue" aria-label="Mark break and continue as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p><code class="inline">break</code> exits the nearest loop immediately. <code class="inline">continue</code> skips the rest of the current iteration and moves to the next one.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>for (int i = 0; i &lt; arr.length; i++) {
+    if (arr[i] == target) break;      // stop searching
+    if (arr[i] &lt; 0) continue;         // skip negatives
+    System.out.println(arr[i]);
+}</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li><code class="inline">break</code> only exits the innermost loop.</li>
+                <li><code class="inline">continue</code> still runs the loop's update statement before moving on.</li>
+                <li>Overusing either can make control flow hard to trace — use them for genuinely early exits.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Assuming <code class="inline">break</code> inside a nested loop exits both loops — it only exits the one it's directly inside.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p><code class="inline">break</code> is exactly how a linear search stops the moment it finds a match instead of scanning the rest of the array for nothing.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">How to Calculate Loop Complexity</span>
+            <input type="checkbox" class="topic-check" data-topic-id="loop-complexity" aria-label="Mark loop complexity as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>Count how many times the loop body runs relative to input size <code class="inline">n</code>. A single pass over <code class="inline">n</code> elements is <code class="inline">O(n)</code>; a loop nested inside another roughly multiplies.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>for (int i = 0; i &lt; n; i++) { }             // O(n)
+
+for (int i = 0; i &lt; n; i++)                 // O(n^2)
+    for (int j = 0; j &lt; n; j++) { }
+
+while (n &gt; 1) { n /= 2; }                   // O(log n)</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li>Single loop over <code class="inline">n</code> → <code class="inline">O(n)</code>.</li>
+                <li>Nested loops, both up to <code class="inline">n</code> → <code class="inline">O(n²)</code>.</li>
+                <li>A loop that divides (or multiplies) its variable each step → <code class="inline">O(log n)</code>.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Assuming two <em>sequential</em> (not nested) loops over <code class="inline">n</code> are <code class="inline">O(n²)</code> — back-to-back loops add, they don't multiply: <code class="inline">O(n) + O(n)</code> is still <code class="inline">O(n)</code>.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>This is literally how you'll answer "what's the time complexity of your solution?" in every interview — trace the loops, not the code.</p>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ===================== 3. METHODS ===================== -->
+    <section class="topic-section" id="methods">
+      <div class="section-head">
+        <div class="intro">
+          <div class="section-kicker"><span class="section-num mono">03 / 12</span></div>
+          <h2>Methods / Functions</h2>
+          <p>DSA solutions are almost always a single method with a very specific signature. Get fluent with writing and calling them.</p>
+        </div>
+        <div class="section-toolbar">
+          <button class="btn btn-ghost btn-sm" data-action="expand-all" type="button">Expand all</button>
+          <button class="btn btn-ghost btn-sm" data-action="collapse-all" type="button">Collapse all</button>
+        </div>
+      </div>
+
+      <div class="topics-grid">
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Declaring &amp; Calling Methods</span>
+            <input type="checkbox" class="topic-check" data-topic-id="method-basics" aria-label="Mark method basics as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>A method is a named, reusable block of code with a return type, a name, and parameters. <code class="inline">void</code> means it returns nothing.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>static int sum(int a, int b) {
+    return a + b;
+}
+
+int total = sum(4, 7);   // calling it</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li>The return type must match what's actually returned — every code path in a non-<code class="inline">void</code> method must return a value.</li>
+                <li>Parameters are local to the method; they don't affect the caller's primitive variables.</li>
+                <li>A method can have zero, one, or multiple parameters, but only one return type.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Forgetting a <code class="inline">return</code> on a code path (e.g. inside an <code class="inline">if</code> without a matching <code class="inline">else</code>) — this won't even compile for non-<code class="inline">void</code> methods.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>Nearly every solution you write is one method with a fixed signature like <code class="inline">int[] twoSum(int[] nums, int target)</code> — this is the shape of the answer, every time.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Static Methods</span>
+            <input type="checkbox" class="topic-check" data-topic-id="static-methods" aria-label="Mark static methods as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p><code class="inline">static</code> means the method belongs to the class itself, not to an instance — you can call it without creating an object first.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">MathUtils.java</div><pre><code>class MathUtils {
+    static int square(int x) {
+        return x * x;
+    }
+}
+// no "new" needed:
+int result = MathUtils.square(5);</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li><code class="inline">main</code> is always static, so any method called directly from <code class="inline">main()</code> must be static too (unless called on an object).</li>
+                <li>Static methods can't access instance variables directly.</li>
+                <li>Helper methods in a single-class DSA solution are almost always static.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Trying to call a non-static method directly from a static <code class="inline">main()</code> without creating an object first — a very common first compiler error.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>Utility/helper functions (<code class="inline">isPrime</code>, <code class="inline">gcd</code>, <code class="inline">swap</code>) are written static because they don't need any object state.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Method Overloading</span>
+            <input type="checkbox" class="topic-check" data-topic-id="method-overloading" aria-label="Mark method overloading as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>Two or more methods can share a name as long as their parameter lists differ. Java picks the right one based on the arguments you pass.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>static int add(int a, int b) { return a + b; }
+static double add(double a, double b) { return a + b; }
+static int add(int a, int b, int c) { return a + b + c; }</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li>Overloading is resolved at compile time, based on argument types.</li>
+                <li>Return type alone is not enough to overload a method — parameters must differ.</li>
+                <li>Constructors can be overloaded too — a <code class="inline">Node(int data)</code> next to a <code class="inline">Node(int data, Node next)</code>.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Trying to "overload" two methods that differ only in return type — this doesn't compile.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>You'll see this most in constructors — one that takes just a value, and one that also takes a pointer to the next node.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Passing Arrays to Methods</span>
+            <input type="checkbox" class="topic-check" data-topic-id="methods-arrays" aria-label="Mark passing arrays to methods as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>Arrays are objects in Java, so they're passed by reference — a method that modifies the array's contents changes the original.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>static void doubleValues(int[] arr) {
+    for (int i = 0; i &lt; arr.length; i++) {
+        arr[i] *= 2;
+    }
+}
+// after calling doubleValues(nums), nums itself is changed</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li>Reassigning the parameter (<code class="inline">arr = new int[5]</code>) inside the method does <strong>not</strong> affect the caller's array — only mutating existing elements does.</li>
+                <li>This is why many DSA methods modify an array in place and return <code class="inline">void</code>.</li>
+                <li>Same is true for any object (<code class="inline">ArrayList</code>, custom classes) — the reference is passed by value.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Expecting a method to "resize" the caller's array by assigning a brand-new array to the parameter — that only rebinds the local variable.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>In-place algorithms (reverse an array, sort in place, two-pointer swap) rely entirely on this behavior.</p>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ===================== 4. ARRAYS ===================== -->
+    <section class="topic-section" id="arrays">
+      <div class="section-head">
+        <div class="intro">
+          <div class="section-kicker"><span class="section-num mono">04 / 12</span></div>
+          <h2>Arrays <span class="priority">★★★ High Priority</span></h2>
+          <p>The single most important prerequisite on this page — comfortable, reflexive array manipulation is what the rest of DSA is built on.</p>
+        </div>
+        <div class="section-toolbar">
+          <button class="btn btn-ghost btn-sm" data-action="expand-all" type="button">Expand all</button>
+          <button class="btn btn-ghost btn-sm" data-action="collapse-all" type="button">Collapse all</button>
+        </div>
+      </div>
+
+      <div class="topics-grid">
+
+        <details class="topic-card" data-searchable open>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Creating &amp; Initializing Arrays</span>
+            <input type="checkbox" class="topic-check" data-topic-id="array-basics" aria-label="Mark creating arrays as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>An array is a fixed-size, ordered block of same-typed values. Size is set once, at creation, and can't change afterward. <strong>Array indexing starts from 0.</strong></p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>int[] arr = {10, 20, 30, 40};
+int[] empty = new int[5];        // all zeros
+int[] copy = new int[]{1, 2, 3};</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li>The first element is <code class="inline">arr[0]</code>, the last is <code class="inline">arr[arr.length - 1]</code>.</li>
+                <li><code class="inline">new int[5]</code> creates 5 elements, all defaulted to <code class="inline">0</code>.</li>
+                <li>Array length is fixed forever — "resizing" means creating a new, bigger array and copying values over.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p><code class="inline">ArrayIndexOutOfBoundsException</code>: confusing the declared size (5) with a valid index — <code class="inline">arr[5]</code> on a 5-element array is out of range; valid indices are 0 to 4.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>Arrays are the base case almost every other data structure (ArrayList, Stack, hash table buckets) is built on top of.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Traversal &amp; Updating Elements</span>
+            <input type="checkbox" class="topic-check" data-topic-id="array-traversal" aria-label="Mark array traversal as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>Visiting every element, usually with a <code class="inline">for</code> loop, to read or update its value.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>int[] arr = {10, 20, 30, 40};
+for (int i = 0; i &lt; arr.length; i++) {
+    System.out.println(arr[i]);
+    arr[i] = arr[i] + 1;   // update in place
+}</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li><code class="inline">arr.length</code> is a field, not a method — no parentheses.</li>
+                <li>The enhanced for loop (<code class="inline">for (int x : arr)</code>) is great for reading but can't update the array through <code class="inline">x</code>.</li>
+                <li>Traversal is <code class="inline">O(n)</code> — you touch every element exactly once.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Writing <code class="inline">for (int i = 0; i &lt;= arr.length; i++)</code> — the <code class="inline">&lt;=</code> causes an out-of-bounds access on the last iteration.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>Every array-based algorithm starts with the ability to traverse cleanly and correctly.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Finding Max/Min &amp; Searching</span>
+            <input type="checkbox" class="topic-check" data-topic-id="array-search-minmax" aria-label="Mark search and max/min as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>Scanning the array once, keeping a running best value (for max/min) or comparing each element to a target (for search).</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>int max = arr[0];
+for (int i = 1; i &lt; arr.length; i++) {
+    if (arr[i] &gt; max) max = arr[i];
+}
+
+int target = 30, index = -1;
+for (int i = 0; i &lt; arr.length; i++) {
+    if (arr[i] == target) { index = i; break; }
+}</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li>Always initialize <code class="inline">max</code>/<code class="inline">min</code> to the first element, not to <code class="inline">0</code>.</li>
+                <li>Linear search is <code class="inline">O(n)</code>; binary search on a sorted array is <code class="inline">O(log n)</code>.</li>
+                <li><code class="inline">break</code> as soon as you find what you're looking for.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Initializing <code class="inline">max</code> to <code class="inline">0</code> when the array might contain only negative values — silently producing the wrong answer.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>This exact pattern — a running best value updated in a single pass — is the skeleton of a huge share of array problems.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Reversing &amp; Copying Arrays</span>
+            <input type="checkbox" class="topic-check" data-topic-id="array-reverse-copy" aria-label="Mark reversing and copying as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>Reversing swaps elements from both ends toward the middle. Copying duplicates values into a new array so the original is untouched.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>int left = 0, right = arr.length - 1;
+while (left &lt; right) {
+    int temp = arr[left];
+    arr[left] = arr[right];
+    arr[right] = temp;
+    left++; right--;
+}
+
+int[] copy = Arrays.copyOf(arr, arr.length);</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li>In-place reversal: two pointers and a temp variable — <code class="inline">O(n)</code> time, <code class="inline">O(1)</code> extra space.</li>
+                <li><code class="inline">int[] b = a;</code> does <strong>not</strong> copy — <code class="inline">b</code> and <code class="inline">a</code> point to the same array.</li>
+                <li><code class="inline">Arrays.copyOf()</code> and <code class="inline">.clone()</code> both create a genuine new array.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Writing <code class="inline">int[] copy = original;</code> expecting an independent array — both variables reference the same underlying data.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>The two-pointer swap pattern here is the same one used in palindrome checks, sorting, and reversing linked lists.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">2D Arrays</span>
+            <input type="checkbox" class="topic-check" data-topic-id="array-2d" aria-label="Mark 2D arrays as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>An array of arrays — used for grids, matrices, and adjacency matrices in graph problems.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>int[][] grid = {
+    {1, 2, 3},
+    {4, 5, 6}
+};
+for (int row = 0; row &lt; grid.length; row++) {
+    for (int col = 0; col &lt; grid[row].length; col++) {
+        System.out.print(grid[row][col] + " ");
+    }
+}</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li><code class="inline">grid.length</code> is the row count; <code class="inline">grid[row].length</code> is the column count of that row.</li>
+                <li>Rows can technically have different lengths ("jagged arrays") — most DSA problems assume they don't.</li>
+                <li>Traversal is almost always a nested loop: outer for rows, inner for columns.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Using <code class="inline">grid.length</code> where <code class="inline">grid[0].length</code> (column count) was meant, especially in non-square grids.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>Matrix problems, grid-based BFS/DFS, and dynamic programming tables are all built on 2D arrays.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">The Arrays Utility Class</span>
+            <input type="checkbox" class="topic-check" data-topic-id="arrays-utility" aria-label="Mark Arrays utility class as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p><code class="inline">java.util.Arrays</code> provides ready-made static methods so you don't hand-write common array operations.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>import java.util.Arrays;
+
+int[] arr = {5, 3, 1, 4};
+Arrays.sort(arr);                    // [1, 3, 4, 5]
+System.out.println(Arrays.toString(arr));
+int[] copy = Arrays.copyOf(arr, arr.length);</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li><code class="inline">Arrays.sort()</code> sorts in place, <code class="inline">O(n log n)</code> for primitives.</li>
+                <li><code class="inline">Arrays.toString()</code> is the easy way to print an array's contents.</li>
+                <li><code class="inline">Arrays.fill(arr, value)</code> sets every element to the same value in one call.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Calling <code class="inline">System.out.println(arr)</code> directly and getting something like <code class="inline">[I@1b6d3586</code> instead of the actual values.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>You'll reach for <code class="inline">Arrays.sort()</code> constantly as a first step before two-pointer or binary-search approaches.</p>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ===================== 5. STRINGS ===================== -->
+    <section class="topic-section" id="strings">
+      <div class="section-head">
+        <div class="intro">
+          <div class="section-kicker"><span class="section-num mono">05 / 12</span></div>
+          <h2>Strings <span class="priority">★★★ High Priority</span></h2>
+          <p>Strings behave like read-only arrays of characters with a lot of built-in helper methods. Know the handful that actually get used.</p>
+        </div>
+        <div class="section-toolbar">
+          <button class="btn btn-ghost btn-sm" data-action="expand-all" type="button">Expand all</button>
+          <button class="btn btn-ghost btn-sm" data-action="collapse-all" type="button">Collapse all</button>
+        </div>
+      </div>
+
+      <div class="topics-grid">
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Creating Strings &amp; Basic Methods</span>
+            <input type="checkbox" class="topic-check" data-topic-id="string-basics" aria-label="Mark string basics as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>A <code class="inline">String</code> is a sequence of characters. <code class="inline">length()</code> gives the character count, <code class="inline">charAt(i)</code> gets the character at an index.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>String s = "hello";
+System.out.println(s.length());     // 5
+System.out.println(s.charAt(0));    // 'h'</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li><code class="inline">length()</code> is a method (with parentheses) on <code class="inline">String</code>; <code class="inline">length</code> is a field (no parentheses) on arrays.</li>
+                <li>Strings are immutable — no method ever changes the original; they all return a new string.</li>
+                <li>Indexing is 0-based, same as arrays.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Writing <code class="inline">s.length</code> instead of <code class="inline">s.length()</code>, or <code class="inline">arr.length()</code> instead of <code class="inline">arr.length</code>.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p><code class="inline">charAt()</code> and <code class="inline">length()</code> are the two building blocks of every string-traversal solution.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">substring(), equals(), compareTo()</span>
+            <input type="checkbox" class="topic-check" data-topic-id="string-compare" aria-label="Mark string comparison methods as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p><code class="inline">substring()</code> extracts part of a string. <code class="inline">equals()</code> checks if two strings hold the same characters. <code class="inline">compareTo()</code> gives ordering.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>String s = "hello world";
+System.out.println(s.substring(0, 5));         // "hello"
+System.out.println(s.equals("hello world"));   // true
+System.out.println("apple".compareTo("banana")); // negative</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li><code class="inline">substring(start, end)</code> — <code class="inline">end</code> is exclusive.</li>
+                <li>Never use <code class="inline">==</code> to compare string contents — it compares references, not characters.</li>
+                <li><code class="inline">compareTo()</code> returns negative/zero/positive — never rely on the exact magnitude, only the sign.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Using <code class="inline">==</code> to compare two strings for equality — it may "work" in simple tests and then fail once a string is built dynamically.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p><code class="inline">equals()</code> is essential for correctness (HashMap keys, duplicate checks); <code class="inline">substring()</code> shows up in every sliding-window and palindrome problem.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">String Traversal &amp; toCharArray()</span>
+            <input type="checkbox" class="topic-check" data-topic-id="string-traversal" aria-label="Mark string traversal as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>Loop through characters with <code class="inline">charAt()</code>, or convert to a <code class="inline">char[]</code> once with <code class="inline">toCharArray()</code> if you need repeated indexed access.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>String s = "hello";
+for (int i = 0; i &lt; s.length(); i++) {
+    System.out.println(s.charAt(i));
+}
+
+char[] chars = s.toCharArray();</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li><code class="inline">toCharArray()</code> is worth it when you're accessing characters many times.</li>
+                <li>A <code class="inline">char[]</code> can be modified in place; the original <code class="inline">String</code> never can.</li>
+                <li><code class="inline">String</code> and <code class="inline">char[]</code> are genuinely different types — some methods only accept one.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Trying to reverse a <code class="inline">String</code> "in place" — Strings are immutable, so convert to a <code class="inline">char[]</code> or <code class="inline">StringBuilder</code> first.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>Almost every string DSA problem (anagrams, palindromes, character frequency) starts with this decision.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">StringBuilder</span>
+            <input type="checkbox" class="topic-check" data-topic-id="stringbuilder" aria-label="Mark StringBuilder as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>A mutable sequence of characters, used whenever you're building or modifying a string repeatedly — far more efficient than concatenating <code class="inline">String</code>s in a loop.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>StringBuilder sb = new StringBuilder();
+sb.append("hello");
+sb.append(" world");
+sb.reverse();
+sb.deleteCharAt(0);
+String result = sb.toString();</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li><code class="inline">append()</code>, <code class="inline">insert()</code>, <code class="inline">delete()</code>, <code class="inline">reverse()</code> all modify it in place.</li>
+                <li>Convert back with <code class="inline">toString()</code> when done.</li>
+                <li>Building a string with <code class="inline">+=</code> inside a loop is <code class="inline">O(n²)</code> total; <code class="inline">StringBuilder.append()</code> is <code class="inline">O(1)</code> amortized per call.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Using <code class="inline">String +=</code> inside a loop that runs many times, silently turning an <code class="inline">O(n)</code> solution into <code class="inline">O(n²)</code>.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>The standard tool for building an output string, reversing a string, or doing in-place-style character manipulation.</p>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ===================== 6. BASIC OOP ===================== -->
+    <section class="topic-section" id="oop">
+      <div class="section-head">
+        <div class="intro">
+          <div class="section-kicker"><span class="section-num mono">06 / 12</span></div>
+          <h2>Basic OOP Required for DSA</h2>
+          <p>Just enough OOP to write a Node class with a straight face — not a full object-oriented design course.</p>
+        </div>
+        <div class="section-toolbar">
+          <button class="btn btn-ghost btn-sm" data-action="expand-all" type="button">Expand all</button>
+          <button class="btn btn-ghost btn-sm" data-action="collapse-all" type="button">Collapse all</button>
+        </div>
+      </div>
+
+      <div class="topics-grid">
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Class &amp; Object</span>
+            <input type="checkbox" class="topic-check" data-topic-id="class-object" aria-label="Mark class and object as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>A class is a blueprint; an object is a specific instance created from it, with its own copy of the instance variables.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Point.java</div><pre><code>class Point {
+    int x;
+    int y;
+}
+
+Point p1 = new Point();
+p1.x = 3;
+p1.y = 4;</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li><code class="inline">new Point()</code> creates a new object in memory and returns a reference to it.</li>
+                <li>Each object has its own copies of instance variables.</li>
+                <li>A class can contain variables (state) and methods (behavior).</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Forgetting <code class="inline">new</code> when creating an object — <code class="inline">Point p1;</code> alone just declares a reference that is <code class="inline">null</code>.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>Custom classes are how you model anything that isn't a plain number or string — linked list nodes, tree nodes, graph edges.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Constructors &amp; this</span>
+            <input type="checkbox" class="topic-check" data-topic-id="constructor-this" aria-label="Mark constructors and this as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>A constructor runs automatically when an object is created. <code class="inline">this</code> refers to the current object, used to tell an instance variable apart from a same-named parameter.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Point.java</div><pre><code>class Point {
+    int x, y;
+    Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+}
+Point p = new Point(3, 4);</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li>A constructor has the same name as the class and no return type — not even <code class="inline">void</code>.</li>
+                <li><code class="inline">this.x = x</code> means "this object's <code class="inline">x</code> field = the parameter <code class="inline">x</code>."</li>
+                <li>Writing your own constructor removes Java's invisible free default one.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Naming a parameter the same as the field and forgetting <code class="inline">this.</code> — without it, <code class="inline">x = x</code> just assigns the parameter to itself.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>Constructors are how a <code class="inline">Node</code> gets its data (and often its <code class="inline">next</code> pointer) set the moment it's created.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable open>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Building a Node Class for DSA</span>
+            <input type="checkbox" class="topic-check" data-topic-id="node-class" aria-label="Mark Node class as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>A tiny custom class holding a value and a reference to another node — the fundamental building block of linked lists, trees, and graphs.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Node.java</div><pre><code>class Node {
+    int data;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+Node head = new Node(10);
+head.next = new Node(20);</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li><code class="inline">next</code> starts as <code class="inline">null</code>, meaning "nothing after this node yet."</li>
+                <li>Following <code class="inline">.next</code> repeatedly is how you walk a linked list.</li>
+                <li>For trees, the same idea becomes <code class="inline">left</code> and <code class="inline">right</code> instead of a single <code class="inline">next</code>.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Forgetting to initialize <code class="inline">next</code> to <code class="inline">null</code> and getting a confusing <code class="inline">NullPointerException</code> much later, far from the actual bug.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>This exact 5-line class is the entire foundation for linked lists, binary trees, and graph adjacency nodes.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Basic Inheritance Concept</span>
+            <input type="checkbox" class="topic-check" data-topic-id="inheritance-basic" aria-label="Mark inheritance as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>A class can <code class="inline">extend</code> another class, inheriting its fields and methods and optionally overriding them.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Animal.java</div><pre><code>class Animal {
+    void speak() { System.out.println("..."); }
+}
+class Dog extends Animal {
+    @Override
+    void speak() { System.out.println("Woof"); }
+}</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li><code class="inline">extends</code> creates an "is-a" relationship — a <code class="inline">Dog</code> is an <code class="inline">Animal</code>.</li>
+                <li><code class="inline">@Override</code> is optional but recommended — it makes the compiler check the signature actually matches.</li>
+                <li>You won't write much inheritance in typical DSA solutions, but you'll see it in provided class templates.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Assuming a subclass automatically gets a constructor from its parent — constructors aren't inherited, though you can call one explicitly with <code class="inline">super(...)</code>.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>More relevant for larger object-oriented codebases than day-to-day DSA problems — know it exists, don't over-invest here.</p>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ===================== 7. RECURSION ===================== -->
+    <section class="topic-section" id="recursion">
+      <div class="section-head">
+        <div class="intro">
+          <div class="section-kicker"><span class="section-num mono">07 / 12</span></div>
+          <h2>Recursion <span class="priority critical">★★★★★ Very High Priority</span></h2>
+          <p>The single highest-leverage topic on this page. If recursion still feels shaky, everything from linked lists onward will feel harder than it needs to.</p>
+        </div>
+        <div class="section-toolbar">
+          <button class="btn btn-ghost btn-sm" data-action="expand-all" type="button">Expand all</button>
+          <button class="btn btn-ghost btn-sm" data-action="collapse-all" type="button">Collapse all</button>
+        </div>
+      </div>
+
+      <div class="topics-grid">
+
+        <details class="topic-card" data-searchable open>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">What Is Recursion?</span>
+            <input type="checkbox" class="topic-check" data-topic-id="recursion-intro" aria-label="Mark what is recursion as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>A method that calls itself to solve a smaller version of the same problem, until the problem is small enough to answer directly.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>static void print(int n) {
+    if (n == 0) return;         // base case
+    System.out.println(n);
+    print(n - 1);               // recursive case
+}</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li>Every recursive method needs a base case (when to stop) and a recursive case (how to shrink the problem).</li>
+                <li>Recursion trades explicit looping for the call stack doing the bookkeeping for you.</li>
+                <li>Anything recursion can do, a loop plus an explicit stack can also do — recursion is often just clearer to write and read.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Writing the recursive case correctly but never actually reaching the base case (e.g. calling <code class="inline">print(n)</code> instead of <code class="inline">print(n - 1)</code>) — infinite recursion.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>Recursion is the natural way to express tree traversal, backtracking, divide-and-conquer, and many DP solutions.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable open>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Base Case &amp; Recursive Case</span>
+            <input type="checkbox" class="topic-check" data-topic-id="base-recursive-case" aria-label="Mark base and recursive case as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>The base case is the simplest version of the problem, answered directly. The recursive case reduces the problem and calls the method again.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>static int factorial(int n) {
+    if (n == 0) return 1;          // base case
+    return n * factorial(n - 1);   // recursive case
+}</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li>The base case must be reachable — every recursive call has to move strictly closer to it.</li>
+                <li>A function can have more than one base case (e.g. <code class="inline">n == 0</code> and <code class="inline">n == 1</code> for Fibonacci).</li>
+                <li>If you can't identify the base case, you can't safely write the recursion.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Writing the wrong base case, like checking <code class="inline">n &lt;= 0</code> when negative inputs should never occur — it silently hides a bug instead of surfacing it.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>This base-case-then-recursive-case shape is the template for every recursive solution you'll write.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable open>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">The Call Stack</span>
+            <input type="checkbox" class="topic-check" data-topic-id="call-stack" aria-label="Mark the call stack as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>Each recursive call is pushed onto the call stack, paused, waiting for the call it made to return. Once a call reaches its base case and returns, the stack unwinds back through every paused call in reverse order.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">trace</div><pre><code>print(3)
+ → print(2)
+    → print(1)
+       → print(0)   // base case, returns
+    ← returns to print(1), which finishes
+ ← returns to print(2), which finishes
+← returns to print(3), which finishes</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li>Each call gets its own separate copy of local variables and parameters.</li>
+                <li>Too much recursion depth causes a <code class="inline">StackOverflowError</code>.</li>
+                <li>Work written before the recursive call happens on the way "down"; work written after it happens on the way back "up" during unwinding.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Assuming a recursive function has already returned once you write the line after the recursive call — that line only runs once every deeper call has fully finished and unwound back to this one.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>Understanding unwinding is exactly what's needed to trace how a recursive Fibonacci, tree traversal, or backtracking solution accumulates its answer.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Recursion with Arrays &amp; Strings</span>
+            <input type="checkbox" class="topic-check" data-topic-id="recursion-arrays-strings" aria-label="Mark recursion with arrays and strings as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>Recursion on arrays/strings usually shrinks the problem by moving an index forward each call, instead of creating a new smaller array every time.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>static int sumArray(int[] arr, int index) {
+    if (index == arr.length) return 0;          // base case
+    return arr[index] + sumArray(arr, index + 1);
+}
+// initial call: sumArray(arr, 0)</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li>Pass the array by reference and use an index parameter to track position.</li>
+                <li>The base case is almost always "index reached the end" or "left pointer passed right pointer."</li>
+                <li>This same index-shrinking idea works identically for strings.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Recomputing a sliced sub-array or sub-string on every recursive call instead of passing an index — quietly turns an <code class="inline">O(n)</code> traversal into something much slower.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>This index-based pattern is exactly how you'll write recursive binary search, and it sets up array/string divide-and-conquer later.</p>
+            </div>
+          </div>
+        </details>
+
+      </div>
+
+      <div class="callout dsa" style="margin-top: var(--sp-3);">
+        <span class="callout-label">Practice before moving on</span>
+        <p>Trace these by hand — base case, recursive case, and the call stack — before checking any solution online:</p>
+        <ul>
+          <li>Print numbers 1 to N (ascending — think about which line runs before vs. after the recursive call).</li>
+          <li>Find the factorial of N.</li>
+          <li>Find the sum of the first N numbers.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== 8. COLLECTIONS ===================== -->
+    <section class="topic-section" id="collections">
+      <div class="section-head">
+        <div class="intro">
+          <div class="section-kicker"><span class="section-num mono">08 / 12</span></div>
+          <h2>Java Collections <span class="priority critical">★★★★★ Very High Priority</span></h2>
+          <p>Java's built-in collections do in one line what would otherwise take twenty. Fluency here is what makes solutions fast to write, not just fast to run.</p>
+        </div>
+        <div class="section-toolbar">
+          <button class="btn btn-ghost btn-sm" data-action="expand-all" type="button">Expand all</button>
+          <button class="btn btn-ghost btn-sm" data-action="collapse-all" type="button">Collapse all</button>
+        </div>
+      </div>
+
+      <div class="topics-grid">
+
+        <details class="topic-card" data-searchable open>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">ArrayList</span>
+            <input type="checkbox" class="topic-check" data-topic-id="arraylist" aria-label="Mark ArrayList as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>A resizable array — unlike <code class="inline">int[]</code>, it grows automatically as you add elements, at the cost of some overhead, and it only holds object types.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>ArrayList&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+list.add(10);
+list.add(20);
+System.out.println(list.get(0));   // 10
+list.set(0, 99);
+list.remove(1);
+System.out.println(list.size());</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li><code class="inline">ArrayList&lt;Integer&gt;</code>, not <code class="inline">ArrayList&lt;int&gt;</code> — generics only work with object (wrapper) types.</li>
+                <li><code class="inline">get(index)</code> is <code class="inline">O(1)</code>; <code class="inline">add()</code> at the end is amortized <code class="inline">O(1)</code>, but middle insert/remove is <code class="inline">O(n)</code>.</li>
+                <li><code class="inline">contains()</code> does a linear scan — <code class="inline">O(n)</code>, not instant.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Reaching for a plain array when the size isn't known ahead of time, then hand-rolling resize logic that <code class="inline">ArrayList</code> already handles correctly.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>Use <code class="inline">ArrayList</code> when the collection's size changes during the algorithm; use <code class="inline">int[]</code> when the size is fixed and known upfront.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable open>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">HashMap</span>
+            <input type="checkbox" class="topic-check" data-topic-id="hashmap" aria-label="Mark HashMap as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>Stores key → value pairs with (average case) <code class="inline">O(1)</code> insertion and lookup by key. Probably the single most-used collection in DSA outside of arrays.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>HashMap&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();
+map.put(1, 100);
+map.put(2, 200);
+System.out.println(map.get(1));          // 100
+System.out.println(map.containsKey(3));  // false
+map.remove(2);</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li><code class="inline">put()</code> on an existing key overwrites its value — it doesn't add a duplicate entry.</li>
+                <li><code class="inline">get()</code> on a missing key returns <code class="inline">null</code>, not an exception.</li>
+                <li><code class="inline">getOrDefault(key, 0)</code> is a clean way to handle frequency counting without a manual check.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Calling <code class="inline">get()</code> on a missing key and using the result directly — unboxing a <code class="inline">null</code> into a primitive throws <code class="inline">NullPointerException</code>.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>The go-to structure for frequency counting, duplicate detection, caching, and the classic Two Sum pattern (value → index).</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable open>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">HashSet</span>
+            <input type="checkbox" class="topic-check" data-topic-id="hashset" aria-label="Mark HashSet as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>A collection of unique elements with no guaranteed order — essentially a <code class="inline">HashMap</code> that only cares about the keys.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>HashSet&lt;Integer&gt; seen = new HashSet&lt;&gt;();
+seen.add(5);
+seen.add(5);              // ignored, already present
+System.out.println(seen.contains(5));  // true
+System.out.println(seen.size());       // 1</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li><code class="inline">add()</code> silently does nothing if the element is already present.</li>
+                <li><code class="inline">contains()</code> is (average case) <code class="inline">O(1)</code> — what makes HashSet useful for membership checks.</li>
+                <li>Doesn't preserve insertion order — use <code class="inline">LinkedHashSet</code> if you need that.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Expecting iteration order to match insertion order — with a plain <code class="inline">HashSet</code>, it's unspecified.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>The standard way to detect duplicates in one pass, track "visited" nodes in graph traversal, or check membership without scanning a list.</p>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ===================== 9. STACK ===================== -->
+    <section class="topic-section" id="stack">
+      <div class="section-head">
+        <div class="intro">
+          <div class="section-kicker"><span class="section-num mono">09 / 12</span></div>
+          <h2>Stack</h2>
+          <p>Last-In-First-Out — the most recently added element is the first one removed.</p>
+        </div>
+      </div>
+
+      <div class="topics-grid">
+
+        <details class="topic-card" data-searchable open>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Stack (LIFO) with Deque</span>
+            <input type="checkbox" class="topic-check" data-topic-id="stack-basics" aria-label="Mark stack basics as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>Modern Java code uses the <code class="inline">Deque</code> interface (backed by <code class="inline">ArrayDeque</code>) instead of the old <code class="inline">Stack</code> class for LIFO behavior.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>Deque&lt;Integer&gt; stack = new ArrayDeque&lt;&gt;();
+stack.push(10);
+stack.push(20);
+System.out.println(stack.peek());  // 20
+stack.pop();                       // removes 20
+System.out.println(stack.isEmpty());</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li><code class="inline">push()</code> adds to the top, <code class="inline">pop()</code> removes and returns the top, <code class="inline">peek()</code> looks without removing.</li>
+                <li>All three operations are <code class="inline">O(1)</code>.</li>
+                <li>The legacy <code class="inline">java.util.Stack</code> is synchronized (slower) and extends <code class="inline">Vector</code> — prefer <code class="inline">Deque</code> via <code class="inline">ArrayDeque</code> in modern code.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Calling <code class="inline">pop()</code> or <code class="inline">peek()</code> on an empty stack — throws <code class="inline">NoSuchElementException</code>; check <code class="inline">isEmpty()</code> first when it's not guaranteed to have elements.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>Matching parentheses, undo operations, expression evaluation, and the classic "Next Greater Element" pattern all rely on a stack.</p>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ===================== 10. QUEUE ===================== -->
+    <section class="topic-section" id="queue">
+      <div class="section-head">
+        <div class="intro">
+          <div class="section-kicker"><span class="section-num mono">10 / 12</span></div>
+          <h2>Queue</h2>
+          <p>First-In-First-Out — the earliest added element is the first one removed.</p>
+        </div>
+      </div>
+
+      <div class="topics-grid">
+
+        <details class="topic-card" data-searchable open>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Queue (FIFO) with Deque</span>
+            <input type="checkbox" class="topic-check" data-topic-id="queue-basics" aria-label="Mark queue basics as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>Also implemented with <code class="inline">ArrayDeque</code>, through the <code class="inline">Queue</code> interface.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>Queue&lt;Integer&gt; queue = new ArrayDeque&lt;&gt;();
+queue.add(10);
+queue.add(20);
+System.out.println(queue.peek());  // 10
+queue.poll();                      // removes 10
+System.out.println(queue.isEmpty());</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li><code class="inline">add()</code>/<code class="inline">offer()</code> inserts at the back; <code class="inline">poll()</code> removes the front; <code class="inline">peek()</code> looks without removing.</li>
+                <li><code class="inline">poll()</code> returns <code class="inline">null</code> on an empty queue; <code class="inline">remove()</code> throws instead — know the difference.</li>
+                <li>All core operations are <code class="inline">O(1)</code>.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Using <code class="inline">pop()</code>/<code class="inline">push()</code> (stack vocabulary) on a <code class="inline">Queue</code> reference — its interface uses <code class="inline">add</code>/<code class="inline">offer</code> and <code class="inline">remove</code>/<code class="inline">poll</code>.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>Queues are the backbone of BFS (breadth-first search) and level-order tree traversal.</p>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ===================== 11. PRIORITY QUEUE ===================== -->
+    <section class="topic-section" id="priority-queue">
+      <div class="section-head">
+        <div class="intro">
+          <div class="section-kicker"><span class="section-num mono">11 / 12</span></div>
+          <h2>PriorityQueue <span class="priority">★★★★ High Priority</span></h2>
+          <p>Java's built-in heap implementation — how you solve "top K" and heap problems without writing a heap from scratch.</p>
+        </div>
+      </div>
+
+      <div class="topics-grid">
+
+        <details class="topic-card" data-searchable open>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">PriorityQueue (Heap)</span>
+            <input type="checkbox" class="topic-check" data-topic-id="priorityqueue-basics" aria-label="Mark PriorityQueue as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>Elements come out in priority order (smallest first, by default) rather than insertion order.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>PriorityQueue&lt;Integer&gt; minHeap = new PriorityQueue&lt;&gt;();
+minHeap.add(5);
+minHeap.add(1);
+minHeap.add(3);
+System.out.println(minHeap.poll());  // 1 (smallest first)
+
+PriorityQueue&lt;Integer&gt; maxHeap =
+    new PriorityQueue&lt;&gt;(Collections.reverseOrder());
+maxHeap.add(5);
+maxHeap.add(1);
+System.out.println(maxHeap.poll());  // 5 (largest first)</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li>Default <code class="inline">PriorityQueue</code> is a min-heap; pass <code class="inline">Collections.reverseOrder()</code> (or a <code class="inline">Comparator</code>) for a max-heap.</li>
+                <li><code class="inline">add()</code>/<code class="inline">poll()</code> are <code class="inline">O(log n)</code>; <code class="inline">peek()</code> is <code class="inline">O(1)</code>.</li>
+                <li>Iterating a <code class="inline">PriorityQueue</code> directly does <strong>not</strong> give sorted order — only repeated <code class="inline">poll()</code> calls do.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Assuming a for-each loop over a <code class="inline">PriorityQueue</code> visits elements smallest-to-largest — the internal array order is heap order, not sorted order.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>The direct tool for Kth largest/smallest, "Top K frequent elements," merging K sorted lists, and Dijkstra's shortest-path algorithm.</p>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ===================== 12. TIME & SPACE COMPLEXITY ===================== -->
+    <section class="topic-section" id="complexity">
+      <div class="section-head">
+        <div class="intro">
+          <div class="section-kicker"><span class="section-num mono">12 / 12</span></div>
+          <h2>Time &amp; Space Complexity <span class="priority critical">★★★★★ Very High Priority</span></h2>
+          <p>You don't need to prove anything with math here — you need to be able to look at code and state its Big-O without hesitating, out loud, in an interview.</p>
+        </div>
+        <div class="section-toolbar">
+          <button class="btn btn-ghost btn-sm" data-action="expand-all" type="button">Expand all</button>
+          <button class="btn btn-ghost btn-sm" data-action="collapse-all" type="button">Collapse all</button>
+        </div>
+      </div>
+
+      <div class="bigo-grid">
+        <div class="bigo-card"><span class="tag">O(1)</span><div class="bar" style="width:4%"></div><p class="name">Constant</p><p>arr[0]</p></div>
+        <div class="bigo-card"><span class="tag">O(log n)</span><div class="bar" style="width:14%"></div><p class="name">Logarithmic</p><p>binary search</p></div>
+        <div class="bigo-card"><span class="tag">O(n)</span><div class="bar" style="width:30%"></div><p class="name">Linear</p><p>single loop</p></div>
+        <div class="bigo-card"><span class="tag">O(n log n)</span><div class="bar" style="width:48%"></div><p class="name">Linearithmic</p><p>efficient sorting</p></div>
+        <div class="bigo-card"><span class="tag">O(n²)</span><div class="bar" style="width:74%"></div><p class="name">Quadratic</p><p>nested loops</p></div>
+        <div class="bigo-card"><span class="tag">O(2ⁿ)</span><div class="bar" style="width:100%"></div><p class="name">Exponential</p><p>naive recursive Fibonacci</p></div>
+      </div>
+      <p class="note-strip" style="margin-top:-0.5rem; margin-bottom: var(--sp-5);">Bar widths are illustrative, not to scale — the point is the trend as <code class="inline">n</code> grows, not the exact ratio.</p>
+
+      <div class="topics-grid">
+
+        <details class="topic-card" data-searchable open>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Big-O Notation</span>
+            <input type="checkbox" class="topic-check" data-topic-id="bigo-basics" aria-label="Mark Big-O notation as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>Big-O describes how an algorithm's running time (or memory use) grows as input size <code class="inline">n</code> grows — a way to talk about performance independent of the specific machine.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>arr[0];                        // O(1)  — constant
+
+for (int i = 0; i &lt; n; i++) { }        // O(n) — linear
+
+while (n &gt; 1) { n /= 2; }     // O(log n) — logarithmic</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li><code class="inline">O(1)</code>: constant, doesn't grow with input (array access, HashMap get on average).</li>
+                <li><code class="inline">O(log n)</code>: shrinks the problem by a fraction each step (binary search).</li>
+                <li><code class="inline">O(n)</code>: one pass over the input.</li>
+                <li><code class="inline">O(n log n)</code>: linear work repeated log n times (efficient sorting).</li>
+                <li><code class="inline">O(n²)</code>: nested loops over the same input.</li>
+                <li><code class="inline">O(2ⁿ)</code>: work doubles with every additional input element (naive recursive Fibonacci, generating all subsets).</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Confusing "fast in practice for small inputs" with "good complexity" — an <code class="inline">O(n²)</code> algorithm can outrun an <code class="inline">O(n log n)</code> one when <code class="inline">n</code> is tiny, but that flips hard as <code class="inline">n</code> grows.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>This is the vocabulary every solution gets judged by — both an automated judge's time limit and an interviewer's expectations.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="topic-card" data-searchable open>
+          <summary>
+            <span class="chevron" aria-hidden="true">›</span>
+            <span class="topic-title">Simplifying Complexity</span>
+            <input type="checkbox" class="topic-check" data-topic-id="bigo-simplify" aria-label="Mark simplifying complexity as understood">
+          </summary>
+          <div class="topic-body">
+            <h4>Concept</h4>
+            <p>Big-O describes growth trend, so constants and smaller terms get dropped — they stop mattering once <code class="inline">n</code> is large enough.</p>
+            <h4>Example</h4>
+            <div class="code-block"><div class="code-tab">Main.java</div><pre><code>// O(2n) simplifies to O(n)
+for (int i = 0; i &lt; n; i++) { }
+for (int i = 0; i &lt; n; i++) { }
+
+// O(n^2 + n) simplifies to O(n^2)
+// the n^2 term dominates once n is large</code></pre></div>
+            <div class="callout remember">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li>Drop constants: <code class="inline">O(2n)</code>, <code class="inline">O(n/2)</code>, and <code class="inline">O(n + 5)</code> are all just <code class="inline">O(n)</code>.</li>
+                <li>Drop lower-order terms: <code class="inline">O(n² + n)</code> is <code class="inline">O(n²)</code>.</li>
+                <li>Space complexity follows the same rules but measures extra memory — a recursive call stack counts too.</li>
+                <li>"Amortized" complexity (like <code class="inline">ArrayList.add()</code>) means occasionally slow operations average out to fast over many calls.</li>
+              </ul>
+            </div>
+            <div class="callout mistake">
+              <span class="callout-label">Common Mistake</span>
+              <p>Reporting complexity without simplifying — saying "<code class="inline">O(n + n)</code>" instead of "<code class="inline">O(n)</code>" isn't wrong, but it's not how it's communicated.</p>
+            </div>
+            <div class="callout dsa">
+              <span class="callout-label">DSA Connection</span>
+              <p>Simplification is exactly what lets you compare two very differently-written solutions at a glance and say which one scales better.</p>
+            </div>
+          </div>
+        </details>
+
+      </div>
+
+      <div class="note-strip">
+        <strong>Two simplification rules to know cold:</strong> drop constants (<code class="inline">O(2n) → O(n)</code>) and drop lower-order terms (<code class="inline">O(n² + n) → O(n²)</code>). Big-O only cares about the dominant term as <code class="inline">n</code> gets large.
+      </div>
+    </section>
+
+    <!-- ===================== 15. CHEAT SHEET ===================== -->
+    <section class="topic-section" id="cheatsheet">
+      <div class="section-head">
+        <div class="intro">
+          <div class="section-kicker"><span class="section-num mono">Ref</span></div>
+          <h2>Java DSA Cheat Sheet</h2>
+          <p>One table, everything you need before an interview. Highly revision-friendly — scan, don't read.</p>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Data Structure</th><th>Declaration</th><th>Common Operations</th><th>Typical Complexity</th><th>Common Use</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Array</td><td><code class="inline">int[] arr = new int[n];</code></td><td>access, traverse, sort</td><td>access <span class="complexity-pill">O(1)</span>, search <span class="complexity-pill">O(n)</span></td><td>fixed-size fast storage</td></tr>
+            <tr><td>ArrayList</td><td><code class="inline">ArrayList&lt;Integer&gt; list = new ArrayList&lt;&gt;();</code></td><td>add(), get(), remove()</td><td>get <span class="complexity-pill">O(1)</span>, add end <span class="complexity-pill">O(1)*</span>, remove mid <span class="complexity-pill">O(n)</span></td><td>resizable list</td></tr>
+            <tr><td>String</td><td><code class="inline">String s = "abc";</code></td><td>charAt(), substring(), equals()</td><td>access <span class="complexity-pill">O(1)</span>, concat <span class="complexity-pill">O(n)</span></td><td>immutable text</td></tr>
+            <tr><td>StringBuilder</td><td><code class="inline">StringBuilder sb = new StringBuilder();</code></td><td>append(), reverse(), toString()</td><td>append <span class="complexity-pill">O(1)*</span></td><td>building/mutating strings</td></tr>
+            <tr><td>HashMap</td><td><code class="inline">HashMap&lt;K,V&gt; map = new HashMap&lt;&gt;();</code></td><td>put(), get(), containsKey()</td><td><span class="complexity-pill">O(1)</span> average</td><td>key → value lookup</td></tr>
+            <tr><td>HashSet</td><td><code class="inline">HashSet&lt;Integer&gt; set = new HashSet&lt;&gt;();</code></td><td>add(), contains(), remove()</td><td><span class="complexity-pill">O(1)</span> average</td><td>uniqueness, fast membership</td></tr>
+            <tr><td>Stack (Deque)</td><td><code class="inline">Deque&lt;Integer&gt; st = new ArrayDeque&lt;&gt;();</code></td><td>push(), pop(), peek()</td><td><span class="complexity-pill">O(1)</span></td><td>LIFO — undo, parentheses</td></tr>
+            <tr><td>Queue (Deque)</td><td><code class="inline">Queue&lt;Integer&gt; q = new ArrayDeque&lt;&gt;();</code></td><td>add(), poll(), peek()</td><td><span class="complexity-pill">O(1)</span></td><td>FIFO — BFS</td></tr>
+            <tr><td>PriorityQueue</td><td><code class="inline">PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;();</code></td><td>add(), poll(), peek()</td><td>add/poll <span class="complexity-pill">O(log n)</span></td><td>heap — top K, Dijkstra</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note-strip">* Amortized — occasional internal resizes average out over many operations.</p>
+    </section>
+
+    <!-- ===================== 16. COMPLEXITY CHEAT SHEET ===================== -->
+    <section class="topic-section" id="complexity-cheatsheet">
+      <div class="section-head">
+        <div class="intro">
+          <div class="section-kicker"><span class="section-num mono">Ref</span></div>
+          <h2>Complexity Cheat Sheet</h2>
+          <p>The complexities you'll be asked to state out loud, most often.</p>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Operation</th><th>Complexity</th></tr></thead>
+          <tbody>
+            <tr><td>Array access</td><td><span class="complexity-pill">O(1)</span></td></tr>
+            <tr><td>Array search</td><td><span class="complexity-pill">O(n)</span></td></tr>
+            <tr><td>ArrayList get</td><td><span class="complexity-pill">O(1)</span></td></tr>
+            <tr><td>HashMap average lookup</td><td><span class="complexity-pill">O(1)</span></td></tr>
+            <tr><td>HashSet average contains</td><td><span class="complexity-pill">O(1)</span></td></tr>
+            <tr><td>Stack push/pop</td><td><span class="complexity-pill">O(1)</span></td></tr>
+            <tr><td>Queue add/poll</td><td><span class="complexity-pill">O(1)</span></td></tr>
+            <tr><td>PriorityQueue add/poll</td><td><span class="complexity-pill">O(log n)</span></td></tr>
+            <tr><td>Binary search</td><td><span class="complexity-pill">O(log n)</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note-strip">Hash-based complexities (HashMap, HashSet) are <strong>average-case</strong>. Worst case — many keys colliding into the same bucket — degrades toward <code class="inline">O(n)</code>, though Java's implementation makes this rare in practice.</p>
+    </section>
+
+    <!-- ===================== 17. COMMON MISTAKES ===================== -->
+    <section class="topic-section" id="mistakes">
+      <div class="section-head">
+        <div class="intro">
+          <div class="section-kicker"><span class="section-num mono">Ref</span></div>
+          <h2>Common Java Mistakes in DSA</h2>
+          <p>Eleven mistakes that show up over and over in DSA code — bad vs. good, side by side.</p>
+        </div>
+      </div>
+
+      <div class="mistakes-grid">
+        <div class="mistake-card" data-searchable>
+          <h4>== vs .equals() for Strings</h4>
+          <p><code class="inline">==</code> compares object references, not contents. Two equal-looking strings can be different objects.</p>
+          <code class="diff-line diff-bad">if (s1 == s2)</code>
+          <code class="diff-line diff-good">if (s1.equals(s2))</code>
+        </div>
+        <div class="mistake-card" data-searchable>
+          <h4>Array Index Errors</h4>
+          <p>Valid indices run from 0 to length - 1. Using <code class="inline">&lt;=</code> reads one past the end.</p>
+          <code class="diff-line diff-bad">for (int i=0; i&lt;=arr.length; i++)</code>
+          <code class="diff-line diff-good">for (int i=0; i&lt;arr.length; i++)</code>
+        </div>
+        <div class="mistake-card" data-searchable>
+          <h4>Integer Overflow</h4>
+          <p><code class="inline">int</code> maxes out around 2.1 billion and wraps silently — no exception is thrown.</p>
+          <code class="diff-line diff-bad">int result = bigNum1 * bigNum2;</code>
+          <code class="diff-line diff-good">long result = (long) bigNum1 * bigNum2;</code>
+        </div>
+        <div class="mistake-card" data-searchable>
+          <h4>Using int When long Is Required</h4>
+          <p>Values like large factorials or products blow past <code class="inline">int</code>'s range fast.</p>
+          <code class="diff-line diff-bad">int factorial = compute(20);</code>
+          <code class="diff-line diff-good">long factorial = compute(20);</code>
+        </div>
+        <div class="mistake-card" data-searchable>
+          <h4>Forgetting static</h4>
+          <p><code class="inline">main()</code> is static, so anything it calls directly must be static too.</p>
+          <code class="diff-line diff-bad">int helper() { ... }</code>
+          <code class="diff-line diff-good">static int helper() { ... }</code>
+        </div>
+        <div class="mistake-card" data-searchable>
+          <h4>length vs length()</h4>
+          <p><code class="inline">length</code> is a field on arrays; <code class="inline">length()</code> is a method on <code class="inline">String</code>.</p>
+          <code class="diff-line diff-bad">arr.length()  /  str.length</code>
+          <code class="diff-line diff-good">arr.length  /  str.length()</code>
+        </div>
+        <div class="mistake-card" data-searchable>
+          <h4>Modifying a Collection While Iterating</h4>
+          <p>Structurally changing a list mid-for-each throws <code class="inline">ConcurrentModificationException</code>.</p>
+          <code class="diff-line diff-bad">for (int x : list) list.remove(x);</code>
+          <code class="diff-line diff-good">it.remove(); // via Iterator</code>
+        </div>
+        <div class="mistake-card" data-searchable>
+          <h4>Forgetting the Base Case in Recursion</h4>
+          <p>Without a reachable base case, recursion runs until <code class="inline">StackOverflowError</code>.</p>
+          <code class="diff-line diff-bad">void f(int n) { f(n-1); }</code>
+          <code class="diff-line diff-good">void f(int n) { if (n==0) return; f(n-1); }</code>
+        </div>
+        <div class="mistake-card" data-searchable>
+          <h4>Not Checking Empty Arrays/Collections</h4>
+          <p>Accessing index 0 on an empty array throws immediately — guard against empty input first.</p>
+          <code class="diff-line diff-bad">int first = arr[0];</code>
+          <code class="diff-line diff-good">if (arr.length == 0) return -1;</code>
+        </div>
+        <div class="mistake-card" data-searchable>
+          <h4>Off-by-One Errors</h4>
+          <p>Mixing 1-based counting with 0-based indexing skips <code class="inline">arr[0]</code> or reads one past the end.</p>
+          <code class="diff-line diff-bad">for (int i=1; i&lt;=n; i++) sum += arr[i];</code>
+          <code class="diff-line diff-good">for (int i=0; i&lt;n; i++) sum += arr[i];</code>
+        </div>
+        <div class="mistake-card" data-searchable>
+          <h4>Integer Division Mistakes</h4>
+          <p>If both operands are <code class="inline">int</code>, division happens as integer division before assignment.</p>
+          <code class="diff-line diff-bad">double avg = sum / count;</code>
+          <code class="diff-line diff-good">double avg = (double) sum / count;</code>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 18. READINESS CHECKLIST ===================== -->
+    <section class="topic-section" id="checklist">
+      <div class="section-head">
+        <div class="intro">
+          <div class="section-kicker"><span class="section-num mono">Check</span></div>
+          <h2>"Am I Ready for DSA?" Checklist</h2>
+          <p>The honest, no-code-required version of the whole page. Check what's actually true right now.</p>
+        </div>
+      </div>
+
+      <div class="checklist-wrap">
+        <div class="checklist-progress">
+          <svg class="ring" viewBox="0 0 64 64" aria-hidden="true">
+            <circle class="track" cx="32" cy="32" r="26"></circle>
+            <circle class="fill" id="checklist-ring-fill" cx="32" cy="32" r="26"></circle>
+          </svg>
+          <div>
+            <span class="pct-num" id="checklist-pct-num">0%</span><br>
+            <span class="pct-lbl">ready</span>
+          </div>
+        </div>
+
+        <ul class="checklist-items">
+          <li><label class="check-row"><input type="checkbox" data-q-id="ready-loops"><span>Can I write loops without difficulty?</span></label></li>
+          <li><label class="check-row"><input type="checkbox" data-q-id="ready-arrays-traverse"><span>Can I traverse an array?</span></label></li>
+          <li><label class="check-row"><input type="checkbox" data-q-id="ready-strings"><span>Can I manipulate strings?</span></label></li>
+          <li><label class="check-row"><input type="checkbox" data-q-id="ready-methods"><span>Can I write methods?</span></label></li>
+          <li><label class="check-row"><input type="checkbox" data-q-id="ready-oop"><span>Do I understand classes and objects?</span></label></li>
+          <li><label class="check-row"><input type="checkbox" data-q-id="ready-node-class"><span>Can I create a simple Node class?</span></label></li>
+          <li><label class="check-row"><input type="checkbox" data-q-id="ready-recursion"><span>Do I understand recursion and the call stack?</span></label></li>
+          <li><label class="check-row"><input type="checkbox" data-q-id="ready-arraylist"><span>Can I use ArrayList?</span></label></li>
+          <li><label class="check-row"><input type="checkbox" data-q-id="ready-hashmap"><span>Can I use HashMap?</span></label></li>
+          <li><label class="check-row"><input type="checkbox" data-q-id="ready-hashset"><span>Can I use HashSet?</span></label></li>
+          <li><label class="check-row"><input type="checkbox" data-q-id="ready-stack"><span>Can I implement Stack operations?</span></label></li>
+          <li><label class="check-row"><input type="checkbox" data-q-id="ready-queue"><span>Can I implement Queue operations?</span></label></li>
+          <li><label class="check-row"><input type="checkbox" data-q-id="ready-pq"><span>Do I understand PriorityQueue?</span></label></li>
+          <li><label class="check-row"><input type="checkbox" data-q-id="ready-bigo"><span>Can I calculate basic Big-O?</span></label></li>
+        </ul>
+
+        <div class="ready-banner" id="ready-banner">🚀 You're ready to start DSA in Java!</div>
+      </div>
+    </section>
+
+    <!-- ===================== 19. WHAT'S NEXT ===================== -->
+    <section class="topic-section" id="whats-next">
+      <div class="section-head">
+        <div class="intro">
+          <div class="section-kicker"><span class="section-num mono">Next</span></div>
+          <h2>DSA Roadmap Preview</h2>
+          <p>What comes after this page — just a preview, no detailed content yet.</p>
+        </div>
+      </div>
+
+      <div class="next-grid">
+        <div class="next-card"><span class="n">01</span><span class="name">Complexity Analysis</span></div>
+        <div class="next-card"><span class="n">02</span><span class="name">Arrays</span></div>
+        <div class="next-card"><span class="n">03</span><span class="name">Strings</span></div>
+        <div class="next-card"><span class="n">04</span><span class="name">Searching</span></div>
+        <div class="next-card"><span class="n">05</span><span class="name">Sorting</span></div>
+        <div class="next-card"><span class="n">06</span><span class="name">Recursion</span></div>
+        <div class="next-card"><span class="n">07</span><span class="name">Linked List</span></div>
+        <div class="next-card"><span class="n">08</span><span class="name">Stack</span></div>
+        <div class="next-card"><span class="n">09</span><span class="name">Queue</span></div>
+        <div class="next-card"><span class="n">10</span><span class="name">Hashing</span></div>
+        <div class="next-card"><span class="n">11</span><span class="name">Trees</span></div>
+        <div class="next-card"><span class="n">12</span><span class="name">BST</span></div>
+        <div class="next-card"><span class="n">13</span><span class="name">Heap</span></div>
+        <div class="next-card"><span class="n">14</span><span class="name">Greedy</span></div>
+        <div class="next-card"><span class="n">15</span><span class="name">Backtracking</span></div>
+        <div class="next-card"><span class="n">16</span><span class="name">Graphs</span></div>
+        <div class="next-card"><span class="n">17</span><span class="name">Dynamic Programming</span></div>
+      </div>
+    </section>
+
+    <div class="no-results" id="no-results">No topics match your search.</div>
+
+    <footer>
+      <p>Built as a personal Java → DSA revision resource. Progress is saved in your browser only — nothing is sent anywhere.</p>
+    </footer>
+
+  </main>
+</div>
+
+<button class="back-to-top" id="back-to-top" aria-label="Back to top" type="button">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
